@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../src/style/style.css">
+  </head>
+  <body>
+    <header class="head_bar">
+      <div class="jumbotron">
+        <img src="public/logo1.png" class="idcamp_image" alt="idcamp" />
+        <h1 class="head_bar__title">Bookshelf Apps</h1>
+      </div>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Input Buku Kamu</h2>
+        <form id="inputBook" data-testid="bookForm">
+          <div>
+            <input id="inputBookId" type="hidden" />
+          </div>
+          <div class="input">
+            <label for="inputBookTitle">Judul Buku :</label>
+            <input id="inputBookTitle" type="text" required data-testid="bookFormTitleInput" />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis Buku :</label>
+            <input id="inputBookAuthor" type="text" required data-testid="bookFormAuthorInput" />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun Terbit :</label>
+            <input id="inputBookYear" type="text" required data-testid="bookFormYearInput" />
+          </div>
+          <div class="input">
+            <label for="inputBookPublisher">Penerbit</label>
+            <input id="inputBookPublisher" type="text" required />
+          </div>
+          <div class="input_inline">
+            <input id="inputBookIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />
+            <label for="inputBookIsComplete"> Tandai Selesai Dibaca</label>
+          </div>
+          <button id="bookSubmit" type="submit" data-testid="bookFormSubmitButton">Input Buku</button>
+        </form>
+      </section>
+      <section class="search_section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <label for="searchBookTitle">Judul Buku :</label>
+          <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+          <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">Cari</button>
+        </form>
+      </section>
+      <section class="book_shelf">
+        <h2>Buku Belum Selesai Dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list" data-testid="incompleteBookList"></div>
+      </section>
+      <section class="book_shelf finished_book">
+        <h2>Buku Selesai Dibaca</h2>
+        <div id="completeBookshelfList" class="book_list" data-testid="completeBookList"></div>
+      </section>
+      <section id="bookDetailSection" style="display: none">
+        <h2>Detail Buku</h2>
+        <div id="bookDetail"></div>
+        <button onclick="editBook()">Edit Buku</button>
+      </section>
+
+      <section id="editBookSection" style="display: none">
+        <h2>Edit Buku</h2>
+        <form id="editBookForm">
+          <div class="input">
+            <label for="editBookTitle">Judul Buku :</label>
+            <input id="editBookTitle" type="text" required />
+          </div>
+          <div class="input">
+            <label for="editBookAuthor">Penulis Buku :</label>
+            <input id="editBookAuthor" type="text" required />
+          </div>
+          <div class="input">
+            <label for="editBookYear">Tahun Terbit : </label>
+            <input id="editBookYear" type="number" required />
+          </div>
+          <div class="input">
+            <label for="editBookPublisher">Penerbit :</label>
+            <input id="editBookPublisher" type="text" required />
+          </div>
+          <div class="input_inline">
+            <label for="editBookIsComplete">Tandai Selesai Dibaca</label>
+            <input id="editBookIsComplete" type="checkbox" />
+          </div>
+          <button id="editBookSubmit" type="submit">Perbarui Buku</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <center>
+        <img src="public/logo1.png" class="logo1_image" alt="logo1" />
+        <p>Copyright &copy; 2025 Bookshelf-Dicoding.</p>
+      </center>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
