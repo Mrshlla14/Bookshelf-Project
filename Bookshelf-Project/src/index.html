@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Bookshelf Apps</title>
+  <link rel="stylesheet" href=".../styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Library Bookshelf Apps</h1>
+  </header>
+  
+  <main>
+    <!-- Formulir Input Buku -->
+    <div class="input-form">
+      <label for="bookTitle">Judul Buku:</label>
+      <input type="text" id="bookTitle" placeholder="Masukkan Judul Buku">
+      
+      <label for="bookAuthor">Penulis:</label>
+      <input type="text" id="bookAuthor" placeholder="Masukkan Penulis">
+      
+      <label for="bookYear">Tahun:</label>
+      <input type="text" id="bookYear" placeholder="Masukkan Tahun">
+
+      <label for="isRead">Tandai Selesai Dibaca</label>
+      <input type="checkbox" id="isRead">
+      
+      <button id="addBookBtn">Tambah Buku</button>
+    </div>
+    
+    <!-- Formulir Pencarian Buku -->
+    <div class="search-form">
+      <label for="searchTitle">Cari Buku:</label>
+      <input type="text" id="searchTitle" placeholder="Masukkan Judul Buku">
+      <button id="searchBookBtn">Cari</button>
+    </div>
+    
+    <!-- Daftar Buku -->
+    <div id="unfinishedBooks">
+      <h3>Buku Belum Selesai Dibaca</h3>
+      <ul id="unfinishedBooksList"></ul>
+    </div>
+    
+    <div id="finishedBooks">
+      <h3>Buku Selesai Dibaca</h3>
+      <ul id="finishedBooksList"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright © 2025 Bookshelf Dicoding.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
